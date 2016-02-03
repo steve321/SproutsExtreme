@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin Core developers
-// Copyright (c) 2011-2015 The TurboStake developers
+// Copyright (c) 2011-2015 The SproutsExtreme developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -1046,7 +1046,7 @@ void ThreadMapPort2(void* parg)
             }
         }
 
-        string strDesc = "TurboStake " + FormatFullVersion();
+        string strDesc = "SproutsExtreme " + FormatFullVersion();
 #ifndef UPNPDISCOVER_SUCCESS
         /* miniupnpc 1.5 */
         r = UPNP_AddPortMapping(urls.controlURL, data.first.servicetype,
@@ -1137,15 +1137,15 @@ void MapPort(bool /* unused fMapPort */)
 // Each pair gives a source name and a seed name.
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
-// testnet dns seed begins with 't', all else are TurboStake dns seeds.
+// testnet dns seed begins with 't', all else are SproutsExtreme dns seeds.
 static const char *strDNSSeed[][2] = {
-        {"seed", "seed.sproutcoin.org"},
-        {"seed2", "seed2.sproutcoin.org"},
-        {"seed3", "seed3.sproutcoin.org"},
-        {"seed4", "seed4.sproutcoin.org"},
-        {"seed5", "seed5.sproutcoin.org"},
-        {"seed6", "seed6.sproutcoin.org"},
-        {"seed7", "seed7.sproutcoin.org"},
+        {"seed", "seed.SproutsExtremecoin.org"},
+        {"seed2", "seed2.SproutsExtremecoin.org"},
+        {"seed3", "seed3.SproutsExtremecoin.org"},
+        {"seed4", "seed4.SproutsExtremecoin.org"},
+        {"seed5", "seed5.SproutsExtremecoin.org"},
+        {"seed6", "seed6.SproutsExtremecoin.org"},
+        {"seed7", "seed7.SproutsExtremecoin.org"},
 };
 
 void ThreadDNSAddressSeed(void* parg)
@@ -1172,7 +1172,7 @@ void ThreadDNSAddressSeed2(void* parg)
     printf("ThreadDNSAddressSeed started\n");
     int found = 0;
 
-    if (true /*!fTestNet*/)  // TurboStake enables dns seeding with testnet too
+    if (true /*!fTestNet*/)  // SproutsExtreme enables dns seeding with testnet too
     {
         printf("Loading addresses from DNS seeds (could take a while)\n");
 
@@ -1620,7 +1620,7 @@ void ThreadMessageHandler2(void* parg)
     }
 }
 
-// TurboStake: stake minter thread
+// SproutsExtreme: stake minter thread
 void static ThreadStakeMinter(void* parg)
 {
     printf("ThreadStakeMinter started\n");
@@ -1733,7 +1733,7 @@ bool BindListenPort(const CService &addrBind, string& strError)
     {
         int nErr = WSAGetLastError();
         if (nErr == WSAEADDRINUSE)
-            strError = strprintf(_("Unable to bind to %s on this computer.  TurboStake is probably already running."), addrBind.ToString().c_str());
+            strError = strprintf(_("Unable to bind to %s on this computer.  SproutsExtreme is probably already running."), addrBind.ToString().c_str());
         else
             strError = strprintf(_("Unable to bind to %s on this computer (bind returned error %d, %s)"), addrBind.ToString().c_str(), nErr, strerror(nErr));
         printf("%s\n", strError.c_str());
@@ -1852,7 +1852,7 @@ void StartNode(void* parg)
     // Get addresses from IRC and advertise ours
     // if (!CreateThread(ThreadIRCSeed, NULL))
     //     printf("Error: CreateThread(ThreadIRCSeed) failed\n");
-    // IRC disabled with TurboStake
+    // IRC disabled with SproutsExtreme
     printf("IRC seeding/communication disabled\n");
 
     // Send and receive from sockets, accept connections
@@ -1878,7 +1878,7 @@ void StartNode(void* parg)
     // Generate coins in the background
     GenerateBitcoins(GetBoolArg("-gen", false), pwalletMain);
 
-    // TurboStake: mint proof-of-stake blocks in the background
+    // SproutsExtreme: mint proof-of-stake blocks in the background
     if (!CreateThread(ThreadStakeMinter, pwalletMain))
         printf("Error: CreateThread(ThreadStakeMinter) failed\n");
 }

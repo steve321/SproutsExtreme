@@ -102,7 +102,7 @@
                </sizepolicy>
               </property>
               <property name="text">
-               <string>trbo</string>
+               <string>spex</string>
               </property>
               <property name="buddy">
                <cstring>lnReqAmount</cstring>
