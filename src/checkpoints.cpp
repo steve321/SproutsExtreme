@@ -24,8 +24,10 @@ namespace Checkpoints
     // + Contains no strange transactions
     //
     static MapCheckpoints mapCheckpoints =
-        boost::assign::map_list_of
-        ( 0, hashGenesisBlockOfficial )
+         boost::assign::map_list_of
+        (     0, uint256("0x00000b8ada156793cd495e09bff9c662226ed3ed3784635295c084f7242b46df"))
+        (   128, uint256("0x0000079ee6833fa5718f209460bbb1dffdab7cce761464833af6e3db418a817e"))
+        (  6900, uint256("0x000000000000097487d5c64a6ae54de3334e0e6115139bbf8733d9b577b5d689"))
         ;
 
     bool CheckHardened(int nHeight, const uint256& hash)

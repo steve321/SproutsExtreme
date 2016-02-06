@@ -5,9 +5,9 @@ SetCompressor /SOLID lzma
 
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
-!define VERSION 0.4.2
+!define VERSION 0.4.2.420x
 !define COMPANY "SproutsExtreme project"
-!define URL http://github.com/SproutsExtreme/SproutsExtreme/
+!define URL http://github.com/SproutsEx/SproutsExtreme/
 
 # MUI Symbol Definitions
 !define MUI_ICON "../share/pixmaps/SproutsExtreme.ico"
@@ -45,13 +45,13 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile SproutsExtreme-0.4.2-win32-setup.exe
+OutFile SproutsExtreme-0.4.2.420x-win32-setup.exe
 InstallDir $PROGRAMFILES\SproutsExtreme
 CRCCheck on
 XPStyle on
 BrandingText " "
 ShowInstDetails show
-VIProductVersion 0.4.2.2
+VIProductVersion 0.4.2.420x
 VIAddVersionKey ProductName SproutsExtreme
 VIAddVersionKey ProductVersion "${VERSION}"
 VIAddVersionKey CompanyName "${COMPANY}"
