@@ -5,9 +5,9 @@ SetCompressor /SOLID lzma
 
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
-!define VERSION 0.4.2
+!define VERSION 0.4.2.420x
 !define COMPANY "SproutsExtreme project"
-!define URL http://github.com/SproutsExtreme/SproutsExtreme/
+!define URL http://github.com/SproutsEx/SproutsExtreme/
 
 # MUI Symbol Definitions
 !define MUI_ICON "../share/pixmaps/SproutsExtreme.ico"
