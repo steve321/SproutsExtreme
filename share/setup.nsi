@@ -5,7 +5,7 @@ SetCompressor /SOLID lzma
 
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
-!define VERSION 0.4.2.420x
+!define VERSION 0.4.3
 !define COMPANY "SproutsExtreme project"
 !define URL http://github.com/SproutsEx/SproutsExtreme/
 
