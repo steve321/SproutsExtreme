@@ -45,13 +45,13 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile SproutsExtreme-0.4.2.420x-win32-setup.exe
+OutFile SproutsExtreme-0.4.2.3-win32-setup.exe
 InstallDir $PROGRAMFILES\SproutsExtreme
 CRCCheck on
 XPStyle on
 BrandingText " "
 ShowInstDetails show
-VIProductVersion 0.4.2.420x
+VIProductVersion 0.4.3
 VIAddVersionKey ProductName SproutsExtreme
 VIAddVersionKey ProductVersion "${VERSION}"
 VIAddVersionKey CompanyName "${COMPANY}"
