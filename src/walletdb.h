@@ -7,7 +7,7 @@
 
 #include "db.h"
 #include "base58.h"
-
+#include comment
 class CKeyPool;
 class CAccount;
 class CAccountingEntry;

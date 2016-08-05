@@ -30,7 +30,11 @@ namespace Checkpoints
         (  6900, uint256("0x000000000000097487d5c64a6ae54de3334e0e6115139bbf8733d9b577b5d689"))
         (  8525, uint256("0x00000000000000601ec39e079064557fedaf0d8f92d86874a904ea4e33cceb75"))
         (  8550, uint256("0x0000000000000fba0dad865c1325d151ee72a2ddcc12fed4032d320c69d2c5ad"))
+<<<<<<< HEAD
         (  31306, uint256("000000000000a2369f769946439e2cf38b9e7f96e6683d6ae95dce955351f494"))
+=======
+        ( 32000, uint256("0x000000000002af6923e5e1e13fa5978332fb31c26fd14449121ca7a584e88e56"))
+>>>>>>> SproutsEx/master
         ;
 
     bool CheckHardened(int nHeight, const uint256& hash)
